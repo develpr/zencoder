@@ -8,11 +8,16 @@ return array(
 	/**
 	 *	Any number of outputs configurations can be predefined for use by the encoder
 	 *
+     *  PLEASE NOTE THAT WE ARE NOT SUPPLYING A FULL "OUTPUT" JSON STRING HERE AS YOU'LL SEE IN THE ZENCODER EXAMPLES,
+     *  WE ARE OMMITTING THINGS SUCH AS NOTIFICATIONS HERE AS THOSE ARE ADDED AUTOMATICALLY LATER BY THE BUNDLE. ONLY
+     *  THE ACTUAL FILE ENCODING SETTINGS SHOULD BE DEFINED BELOW!
+     *
 	 * 	Provided by Zencoder
 	 *  @link https://app.zencoder.com/docs/guides/encoding-settings
 	 */
 	'schemes' => array(
 
+        //Simple audio encoding for MP3
 		1 => '{
 			"audio_bitrate": 128,
 			"skip_video": true,

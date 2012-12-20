@@ -59,7 +59,7 @@ class ZencoderFile extends \Laravel\Database\Eloquent\Model
 			$encodeWith = Config::get('zencoder::api.default_encoding_profile');
 
 		$encodingScheme = json_decode(Config::get('zencoder::encoding.schemes.' . $encodeWith));
-		
+
 		//new filename
 		//todo: need to find out how we should grab the file extension - add a config option?
 		$this->encoded_filename = md5($this->original_filename . date("Y-m-d H:i:s")) . '.' . $encodingScheme->format;
@@ -68,12 +68,12 @@ class ZencoderFile extends \Laravel\Database\Eloquent\Model
 		$outputToUse = Config::get('zencoder::api.outputs.use');
 		//Set the baseurl
 		$outputBaseUrl = Config::get('zencoder::api.outputs.options.' . $outputToUse . '.base_url');
-		
+
 		//todo: do we need to guess at or otherwise set the output_path here?
-		
+
 		$encodingScheme->base_url = $outputBaseUrl;
 		$encodingScheme->filename = $this->encoded_filename;
-		
+
 		//Special check for S3 public permissions flag - this only really applies for S3 at this point
 		if(strtolower($outputToUse) == 's3')
 		{
@@ -81,8 +81,8 @@ class ZencoderFile extends \Laravel\Database\Eloquent\Model
 			if($public)
 				$encodingScheme->public = 1;
 		}
-			
-		
+
+
 		$encodingScheme->notifications = array(
 			array(
 				"url" => URL::base() . Config::get('zencoder::api.notifications.url'),
