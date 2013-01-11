@@ -35,7 +35,8 @@ return array(
 			"width": 640,
 			"max_frame_rate": 30,
 			"video_bitrate": 1500,
-			"h264_level": 3
+			"h264_level": 3,
+			"format": "mp4",
 			}
 		',
 
