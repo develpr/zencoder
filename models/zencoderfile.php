@@ -14,6 +14,7 @@ class ZencoderFile extends \Laravel\Database\Eloquent\Model
 
 	/**
 	 * Run the encoding job for the data in the model
+	 * todo: should we be catching these exceptions? Seems like it might be better to let the exceptions fly so the end "user" can catch them and handle them as needed for their app?
 	 */
 	public function run()
 	{
@@ -59,6 +60,12 @@ class ZencoderFile extends \Laravel\Database\Eloquent\Model
 			$encodeWith = Config::get('zencoder::api.default_encoding_profile');
 
 		$encodingScheme = json_decode(Config::get('zencoder::encoding.schemes.' . $encodeWith));
+
+		//todo: this needs to really be figured out a bit more - for now we'll just throw an exception if no format exists.
+		if(!$encodingScheme->format)
+		{
+			throw new \Zencoder\ZencoderConnectionException('No format was specified in your encoding settings (bundles/zencoder/config/encoding.php) so an output filename can not be generated.');
+		}
 
 		//new filename
 		//todo: need to find out how we should grab the file extension - add a config option?
