@@ -1,6 +1,7 @@
 <?php namespace Develpr\Zencoder;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Foundation\AliasLoader;
 
 class ZencoderServiceProvider extends ServiceProvider {
 
@@ -19,6 +20,17 @@ class ZencoderServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->package('develpr/zencoder');
+
+		//Include routes
+		include __DIR__ . '/routes.php';
+
+		AliasLoader::getInstance(array(
+			'Zencoder' 						=> 'Zencoder\Zencoder',
+			'ZencoderEncodingException' 	=>  'Zencoder\ZencoderEncodingException',
+			'ZencoderFileLocationException' =>  'Zencoder\ZencoderFileLocationException',
+			'ZencoderFileFormatException' 	=>  'Zencoder\ZencoderFileFormatException',
+			'ZencoderConnectionException' 	=>  'Zencoder\ZencoderConnectionException'
+		));
 	}
 
 	/**
