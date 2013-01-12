@@ -48,9 +48,9 @@ return array(
 			// @link https://app.zencoder.com/docs/guides/getting-started/working-with-s3
 			's3' => array(
 				'base_url' => 's3://your-bucket/',
-				'public' => true
+				'public' => true,
                 //CAREFUL - setting public to true will make all finished and encoded files public by default
-				'public' => false
+				'public' => false,
 			),
 
 		),
