@@ -6,6 +6,9 @@ class ZencoderFile extends \Eloquent
 	protected $request;
 	protected $encodeWith;
 
+	//Which table will be used to persist data?
+	protected $table = 'zencoderfiles';
+
 	// //todo: these aren't scoped right? Or are they?
 	// const STATUS_NEW = 1;
 	// const STATUS_PROCESSING = 2;
