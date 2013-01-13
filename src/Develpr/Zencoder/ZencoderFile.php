@@ -1,6 +1,4 @@
-<?php
-
-namespace Zencoder;
+<?php namespace Develpr\Zencoder;
 
 class ZencoderFile extends \Eloquent
 {

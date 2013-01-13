@@ -1,11 +1,11 @@
 <?php
 
-namespace Zencoder;
+namespace Develpr\Zencoder;
 
 /**
  * This controller is intended to providing supporting controller routes for the Zencoder bundle/package.
  */
-class ZencoderController extends \BaseController
+class ZencoderController extends \Controller
 {
 
 	/**
@@ -17,7 +17,8 @@ class ZencoderController extends \BaseController
 	{
 		$notification = json_decode(trim(file_get_contents('php://input')));
 
-		$zencoderFile = Zencoderfile::where('job_id', '=', $notification->job->id)->first();
+		//todo: catch the case that nothing comes back, or a malformted notification
+		$zencoderFile = ZencoderFile::where('job_id', '=', $notification->job->id)->first();
 
 		//todo: shouldn't have to do! figure out why this isn't getting set
 		$zencoderFile->exists = true;

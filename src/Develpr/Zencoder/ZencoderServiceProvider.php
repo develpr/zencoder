@@ -25,11 +25,11 @@ class ZencoderServiceProvider extends ServiceProvider {
 		include __DIR__ . '/routes.php';
 
 		AliasLoader::getInstance(array(
-			'Zencoder' 						=> 'Zencoder\Zencoder',
-			'ZencoderEncodingException' 	=>  'Zencoder\ZencoderEncodingException',
-			'ZencoderFileLocationException' =>  'Zencoder\ZencoderFileLocationException',
-			'ZencoderFileFormatException' 	=>  'Zencoder\ZencoderFileFormatException',
-			'ZencoderConnectionException' 	=>  'Zencoder\ZencoderConnectionException'
+			'Zencoder' 						=> 	'Develpr\Zencoder\Zencoder',
+			'ZencoderEncodingException' 	=>  'Develpr\Zencoder\ZencoderEncodingException',
+			'ZencoderFileLocationException' =>  'Develpr\Zencoder\ZencoderFileLocationException',
+			'ZencoderFileFormatException' 	=>  'Develpr\Zencoder\ZencoderFileFormatException',
+			'ZencoderConnectionException' 	=>  'Develpr\Zencoder\ZencoderConnectionException'
 		));
 	}
 
