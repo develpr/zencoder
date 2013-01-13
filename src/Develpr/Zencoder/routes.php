@@ -1,3 +1,3 @@
 <?php
 
-Route::get('zencoder/callback', 'Develpr\Zencoder\ZencoderController@callback');
+Route::any('zencoder/callback', 'Develpr\Zencoder\ZencoderController@callback');
