@@ -20,8 +20,6 @@ class Zencoder
 
 		$newZencoderFile = new ZencoderFile();
 
-		//$newZencoderFile->encoding_scheme = $encodingScheme;
-
 		$newZencoderFile->status = 1;
 		$newZencoderFile->original_filename = $input;
 

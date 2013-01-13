@@ -29,7 +29,7 @@ class ZencoderController extends \Controller
 		{
 			//OH NO!
 			$zencoderFile->status = Zencoder::STATUS_FAILED;
-			$responses = Event::fire('zencoder.failed', array($zencoderFile, $notification));
+			$responses = \Event::fire('zencoder.failed', array('zencoderfile' => $zencoderFile, 'notification' => $notification));
 
 		}
 		else if($notification->job->state == 'finished')
@@ -38,7 +38,7 @@ class ZencoderController extends \Controller
 			$zencoderFile->output_path = $notification->output->url;
 			$zencoderFile->duration = $notification->output->duration_in_ms;
 			$zencoderFile->output_size = $notification->output->file_size_in_bytes;
-			$responses = Event::fire('zencoder.finished', array($zencoderFile, $notification));
+			$responses = \Event::fire('zencoder.finished', array('zencoderfile' => $zencoderFile, 'notification' => $notification));
 		}
 
 		$zencoderFile->save();
