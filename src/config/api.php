@@ -49,7 +49,7 @@ return array(
 			's3' => array(
 				'base_url' => 's3://your-bucket/',
                 //CAREFUL - setting public to true will make all finished and encoded files public by default
-				'public' => true
+				'public' => false
 			),
 
 		),
