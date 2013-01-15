@@ -42,7 +42,9 @@ return array(
 		'options' => array(
 
 			// ftp://user:password@host.com/filepath/to/output/
-			'ftp' => array(),
+			'ftp' => array(
+				'base_url' => 'ftp://username:password@host/and/path/to/'
+			),
 
 			// If you're using S3, you'll want to be sure of proper permissions
 			// @link https://app.zencoder.com/docs/guides/getting-started/working-with-s3
@@ -52,6 +54,12 @@ return array(
                 //CAREFUL - setting public to true will make all finished and encoded files public by default
 				'public' => false
 			),
+
+			//todo: needs additional testing
+			'cloudfiles' => array(
+				//Can add region here, such as uk ('cf+uk://....')
+				'base_url' => 'cf://username:api_key@container/'
+			)
 
 		),
 
@@ -76,6 +84,12 @@ return array(
 			's3' => array(
 				'base_url' => 's3://your-bucket/',
 			),
+
+			//todo: needs additional testing
+			'cloudfiles' => array(
+				//Can add region here, such as uk ('cf+uk://....')
+				'base_url' => 'cf://username:api_key@container/'
+			)
 
 		),
 
