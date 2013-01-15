@@ -11,7 +11,7 @@ A series of abstractions to simplify audio/video encoding with Zencoder with the
 Notice:
 -------
 
-This is my first Laravel 4 package (formally my first Laravel 3 package!), it is still very much in active development, and I am quite new to Laravel - please feel free to make any recommendations or if you see issues _please_ let me know. I needed the functionality this package provides which is why I created it, but I'm releasing it here because I'm interested in being part of the community at large, and hopefully giving something back to somebody.
+This is my first Laravel 4 package (formally my first Laravel 3 bundle!), it is still very much in active development, and I am quite new to Laravel - please feel free to make any recommendations or if you see issues _please_ let me know. I needed the functionality this package provides which is why I created it, but I'm releasing it here because I'm interested in being part of the community at large, and hopefully giving something back to somebody.
 
 
 What it does
@@ -106,7 +106,7 @@ In this example, you'd need to have the file `testsound.wav` in your `inputs` ba
 Potential basic usages
 ----------------------
 
-Continuing with this `\Zencoder\Models\ZencoderFile` object which contains some not-particularly-useful information that you may or may not want: In my own application (I'm using Zencoder to encode audio) I'm doing _something_ like
+Continuing with this `\Develpr\Zencoder\ZencoderFile` object which contains some not-particularly-useful information that you may or may not want: In my own application (I'm using Zencoder to encode audio) I'm doing _something_ like
 
 	//(*warning: sudoish code*)
 	$newUserRecording->file(Zencoder::create('file_upload.wav'));
