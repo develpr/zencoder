@@ -1,5 +1,5 @@
-develpr's zencoder package
-==========================
+Laravel 4 (Beta) Zencoder package
+=================================
 
 For use with early release for Laravel 4 Beta
 ---------------------------------------------
