@@ -19,17 +19,17 @@ class ZencoderServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('develpr/zencoder');
+		$this->package('develpr/zencoder'); #could be set to: $this->package('zencoder')
 
 		//Include routes
 		include __DIR__ . '/routes.php';
 
 		AliasLoader::getInstance(array(
 			'Zencoder' 						=> 	'Develpr\Zencoder\Zencoder',
-			'ZencoderEncodingException' 	=>  'Develpr\Zencoder\ZencoderEncodingException',
-			'ZencoderFileLocationException' =>  'Develpr\Zencoder\ZencoderFileLocationException',
-			'ZencoderFileFormatException' 	=>  'Develpr\Zencoder\ZencoderFileFormatException',
-			'ZencoderConnectionException' 	=>  'Develpr\Zencoder\ZencoderConnectionException'
+			#'ZencoderEncodingException' 	=>  'Develpr\Zencoder\ZencoderEncodingException',
+			#'ZencoderFileLocationException' =>  'Develpr\Zencoder\ZencoderFileLocationException',
+			#'ZencoderFileFormatException' 	=>  'Develpr\Zencoder\ZencoderFileFormatException',
+			#'ZencoderConnectionException' 	=>  'Develpr\Zencoder\ZencoderConnectionException'
 		));
 	}
 
