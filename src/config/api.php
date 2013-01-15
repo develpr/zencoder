@@ -43,7 +43,7 @@ return array(
 
 			// ftp://user:password@host.com/filepath/to/output/
 			'ftp' => array(
-				'base_url' => 'ftp://username:password@host/and/path/to/'
+				'base_url' => 'ftp://username:password@host/and/path/too/'
 			),
 
 			// If you're using S3, you'll want to be sure of proper permissions
@@ -76,7 +76,9 @@ return array(
 		'options' => array(
 
 			// ftp://user:password@host.com/filepath/to/input/
-			'ftp' => array(),
+			'ftp' => array(
+                'base_url' => 'ftp://username:password@host/and/path/too/'
+            ),
 
 			// If you're using S3, you'll want to be sure of proper permissions
 			// @link https://app.zencoder.com/docs/guides/getting-started/working-with-s3
