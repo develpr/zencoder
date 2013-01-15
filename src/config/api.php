@@ -27,7 +27,7 @@ return array(
 	'container' => 'json',
 
 	//Default encoding profile to use
-	'default_encoding_profile' => 1,
+	'default_encoding_profile' => "mp3_128_vbr",
 
 	/**
 	 *   OUTPUTS

@@ -17,8 +17,12 @@ return array(
 	 */
 	'schemes' => array(
 
+
+        //      NOTE: Because these are intended to be edited/modified/customized, feel free to use a more semantic encoding
+        //            name such as "mp3" or "mp3_128_vbr" to make your code more readable.
+
         //Simple audio encoding for MP3
-		1 => '{
+		"mp3_128_vbr" => '{
 			"audio_bitrate": 128,
 			"skip_video": true,
 			"format": "mp3",
@@ -28,7 +32,7 @@ return array(
 		',
 
 		//Video for mobile devices
-		2 => '{
+		"mp4_mobile" => '{
 			"audio_bitrate": 128,
 			"audio_sample_rate": 44100,
 			"height": 480,
