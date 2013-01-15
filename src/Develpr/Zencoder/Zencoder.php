@@ -26,9 +26,8 @@ class Zencoder
 		if($newZencoderFile->run($encodingScheme))
 		{
 			$newZencoderFile->save();
+            return $newZencoderFile;
 		}
-
-		return $newZencoderFile;
 
 	}
 

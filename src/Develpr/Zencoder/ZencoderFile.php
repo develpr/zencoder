@@ -25,19 +25,11 @@ class ZencoderFile extends \Eloquent
 	 */
 	public function run()
 	{
-		try{
-			//todo: catch file error
-			$this->buildRequest();
+        //todo: catch file error
+        $this->buildRequest();
 
-			//todo: catch connection error
-			$this->sendRequest();
-
-		}catch(\Exception $e)
-		{
-			return false;
-		}
-
-		return true;
+        //todo: catch connection error
+        $this->sendRequest();
 	}
 
 	/**
@@ -143,9 +135,9 @@ class ZencoderFile extends \Eloquent
 			$errorMessage = '';
 			foreach($result->errors as $error)
 			{
-				$errorMessage . $error . ".   ";
+				$errorMessage = $errorMessage . $error . ".   ";
 			}
-			Throw new \Exception($errorMessage);
+			Throw new ZencoderConnectionException($errorMessage);
 		}
 
 		$this->job_id = $result->id;
