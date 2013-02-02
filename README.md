@@ -7,11 +7,15 @@ For use with early release for Laravel 4 Beta
 A series of abstractions to simplify audio/video encoding with Zencoder with the Laravel 4 framework
 
 
-
-Notice:
+Notice
 -------
 
 This is my first Laravel 4 package (formally my first Laravel 3 bundle!), it is still very much in active development, and I am quite new to Laravel - please feel free to make any recommendations or if you see issues _please_ let me know. I needed the functionality this package provides which is why I created it, but I'm releasing it here because I'm interested in being part of the community at large, and hopefully giving something back to somebody.
+
+Thanks
+-------
+
+Thanks to #laravel for help getting started, and in particular to **wishfoundry** for taking the time to give advice and even improving some of the code, as well as offering a bunch of helpful suggestions. And thanks to people who've actually downloaded the code and let me know about issues.
 
 
 What it does
