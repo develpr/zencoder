@@ -18,7 +18,7 @@ return array(
 	//Optional - the label
 	'prefix' => '',
 
-	//How many SECONDS between creating thumbnails? If you'd prefer to use a number of thumbnials (instead of every x
+	//How many SECONDS between creating thumbnails? If you'd prefer to use a number of thumbnails (instead of every x
 	//seconds, y thumbnails evenly spaced) set interval to false or 0 as it will be checked first.
 	'interval' => 60,
 
