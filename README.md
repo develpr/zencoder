@@ -51,7 +51,7 @@ and run:
 
 ```
 composer install
-php artisan migrate develpr/zencoder
+php artisan migrate --package=develpr/zencoder
 php artisan config:publish develpr/zencoder
 ```
 
