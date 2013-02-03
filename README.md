@@ -192,6 +192,15 @@ So, the "sample request" build in the [API Request Builder](https://app.zencoder
 *At this point only a single output is supported, but it should be quite easy to add an unlimited number of outputs.*
 
 
+Thumbnails
+----------
+
+Zencoder has a large number of powerful options for generating thumbnail images during a video encoding job. **only a small subset** of these options are actually easily configurable via this package, however it would be very easy to add your own options to the configuration. For the time being, all that is needed to enable thumbnails is that you need to encode a video and be sure that the `enabled` flag is set to true in the `thumbnails.php` config file.
+
+For the time being the additional options are documented/commented in the config, so I'll leave it at that. Note that the default encoding container format is actually an mp3 and thumbnails are not generated for audio only files.
+
+
+
 
 Events
 ------
