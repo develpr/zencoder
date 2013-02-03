@@ -103,6 +103,43 @@ class ZencoderFile extends \Laravel\Database\Eloquent\Model
 			$encodingScheme->notifications[] = $email;
 		}
 
+		
+		$thumbnails = (boolean)\Config::get('zencoder::thumbnails.enabled');
+
+		if($thumbnails)
+		{
+			$thumbnails = new \stdClass();
+			$prefix = trim(\Config::get('zencoder::thumbnails.prefix'));
+			if($prefix)
+				$thumbnails->prefix = $prefix;
+
+			$interval = \Config::get('zencoder::thumbnails.interval');
+			$number = \Config::get('zencoder::thumbnails.number');
+
+			if($interval)
+				$thumbnails->interval = $interval;
+			else if($number)
+				$thumbnails->number = $number;
+
+			//Check which output format we want to use
+			$thumbnailOutputToUse = \Config::get('zencoder::thumbnails.output.use');
+			//Set the baseurl
+			$thumbnails->base_url = \Config::get('zencoder::thumbnails.output.options.' . $thumbnailOutputToUse . '.base_url');
+
+			//Special check for S3 public permissions flag - this only really applies for S3 at this point
+			if(strtolower($thumbnailOutputToUse) == 's3')
+			{
+				$public = \Config::get('zencoder::thumbnails.output.options.s3.public');
+				if($public)
+					$thumbnails->public = 1;
+			}
+
+			$encodingScheme->thumbnails = $thumbnails;
+
+		}
+
+
+
 		$request->output = array(
 			$encodingScheme
 		);
