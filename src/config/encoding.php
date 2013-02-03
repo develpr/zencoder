@@ -40,7 +40,7 @@ return array(
 			"max_frame_rate": 30,
 			"video_bitrate": 1500,
 			"h264_level": 3,
-			"format": "mp4",
+			"format": "mp4"
 			}
 		',
 
