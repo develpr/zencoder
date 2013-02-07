@@ -44,7 +44,7 @@ Installation
 
 to install, simply add the following to your composer.json
 
-`develpr/zencoder: "dev-l4" `
+`"develpr/zencoder": "dev-l4" `
 
 
 and run:
