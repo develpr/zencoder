@@ -55,6 +55,19 @@ php artisan migrate --package=develpr/zencoder
 php artisan config:publish develpr/zencoder
 ```
 
+Finally, add the service provider to `app/config/app.php` in the `'providers'` area:
+
+```
+...
+...
+'providers' => array(
+    ...
+    ...
+    'Develpr\Zencoder\ZencoderServiceProvider'
+    ),
+...
+```
+
 This zencoder package automatically handle all routes to "zencoder/callback" and is not configureable at this time
 
 
