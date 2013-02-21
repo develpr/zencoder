@@ -25,11 +25,20 @@ class ZencoderFile extends \Eloquent
 	 */
 	public function run()
 	{
-        //todo: catch file error
-        $this->buildRequest();
+		try{
+			//todo: catch file error
+			$this->buildRequest();
 
-        //todo: catch connection error
-        $this->sendRequest();
+			//todo: catch connection error
+			$this->sendRequest();
+
+		}catch(\Exception $e)
+		{
+			//do more
+			return false;
+		}
+
+		return true;
 	}
 
 	/**
