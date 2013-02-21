@@ -106,4 +106,9 @@ return array(
 		'url' => '/zencoder/callback',
 
 	),
+
+	//Which URI base segment would you like the callback to be directed to? default is zencoder
+	// which means the package will handle callbacks to <base url>/zencoder/callback
+	'handles' => 'zencoder',
+
 );
