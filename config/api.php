@@ -29,6 +29,9 @@ return array(
 	//Default encoding profile to use
 	'default_encoding_profile' => 1,
 
+	//What region do you want the files to be transcoded in? (Generally the same as the S3 region)
+	'region' => 'us-n-virginia',
+
 	/**
 	 *   OUTPUTS
 	 *
