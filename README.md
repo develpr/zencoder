@@ -46,7 +46,7 @@ Initial setup w/ Laravel
 After installing via `php artisan bundle:install zencoder` and running the zencoder migration(s) `php artisan migrate zencoder` you'll need to add a section to your /application/bundles.php file:
 
 	'zencoder' => array(
-		'hanldes' => 'zencoder',
+		'handles' => 'zencoder',
 		'auto' => true
 	),
 	
