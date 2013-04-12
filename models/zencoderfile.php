@@ -54,6 +54,9 @@ class ZencoderFile extends \Laravel\Database\Eloquent\Model
 
 		$request->input = $this->input_path;
 
+		//Set the region
+		$request->region = Config::get('zencoder::api.region');
+
         //Check to see if the encoding preset was set at run time, else we'll get the default encoding profile from config
 		$encodeWith = $this->getEncodingPreset();
 		if(!$this->encodeWith)
